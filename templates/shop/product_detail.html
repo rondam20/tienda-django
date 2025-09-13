@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{{ product.name }} — Mi Tienda{% endblock %}
+{% block content %}
+<section class="grid" style="grid-template-columns: 1.1fr .9fr; gap:28px;">
+  <div class="card">
+    <div class="card-media" style="aspect-ratio: 4/3;">
+      {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.name }}">
+      {% else %}<img src="https://placehold.co/1200x900" alt="{{ product.name }}">{% endif %}
+    </div>
+  </div>
+  <div class="card" style="padding:18px 18px 8px;">
+    <h1 style="margin:4px 0 10px;">{{ product.name }}</h1>
+    <div class="price" style="font-size:22px; margin-bottom:8px;">{{ product.price }} {{ product.currency }}</div>
+    <p style="color:var(--muted)">{{ product.description }}</p>
+    {% if stock %}
+      <hr>
+      <small>Tallas disponibles</small>
+      <div class="chipbar" style="margin-top:6px;">
+        {% for s in stock %}{% if s.quantity > 0 %}
+          <span class="chip">{{ s.size }} · {{ s.quantity }}</span>
+        {% endif %}{% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

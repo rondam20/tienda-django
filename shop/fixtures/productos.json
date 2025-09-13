@@ -1,0 +1,49 @@
+[
+  { "model": "shop.category", "pk": 1, "fields": { "name": "Camisetas", "slug": "camisetas" } },
+  { "model": "shop.category", "pk": 2, "fields": { "name": "Jeans", "slug": "jeans" } },
+
+  { "model": "shop.product", "pk": 1, "fields": {
+    "category": 1, "name": "Camiseta blanca básica", "slug": "camiseta-blanca",
+    "description": "Camiseta de algodón 100%",
+    "price": "25000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:00Z"
+  }},
+  { "model": "shop.product", "pk": 2, "fields": {
+    "category": 1, "name": "Camiseta negra", "slug": "camiseta-negra",
+    "description": "Corte unisex",
+    "price": "28000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:10Z"
+  }},
+  { "model": "shop.product", "pk": 3, "fields": {
+    "category": 2, "name": "Jean azul clásico", "slug": "jean-azul",
+    "description": "Corte recto",
+    "price": "75000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:20Z"
+  }},
+  { "model": "shop.product", "pk": 4, "fields": {
+    "category": 2, "name": "Jean slim fit", "slug": "jean-slim-fit",
+    "description": "Entallado",
+    "price": "82000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:30Z"
+  }},
+  { "model": "shop.product", "pk": 5, "fields": {
+    "category": 1, "name": "Camiseta roja", "slug": "camiseta-roja",
+    "description": "Algodón peinado",
+    "price": "30000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:40Z"
+  }},
+  { "model": "shop.product", "pk": 6, "fields": {
+    "category": 1, "name": "Camiseta oversize", "slug": "camiseta-oversize",
+    "description": "Tela pesada",
+    "price": "35000.00", "currency": "COP", "active": true,
+    "created_at": "2025-09-12T21:15:50Z"
+  }},
+
+  { "model": "shop.stockitem", "pk": 1, "fields": { "product": 1, "size": "S",  "quantity": 10 } },
+  { "model": "shop.stockitem", "pk": 2, "fields": { "product": 1, "size": "M",  "quantity": 12 } },
+  { "model": "shop.stockitem", "pk": 3, "fields": { "product": 2, "size": "M",  "quantity": 8 } },
+  { "model": "shop.stockitem", "pk": 4, "fields": { "product": 3, "size": "32", "quantity": 5 } },
+  { "model": "shop.stockitem", "pk": 5, "fields": { "product": 4, "size": "30", "quantity": 7 } },
+  { "model": "shop.stockitem", "pk": 6, "fields": { "product": 5, "size": "L",  "quantity": 9 } },
+  { "model": "shop.stockitem", "pk": 7, "fields": { "product": 6, "size": "XL", "quantity": 4 } }
+]
