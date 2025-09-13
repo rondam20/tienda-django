@@ -60,7 +60,7 @@ WSGI_APPLICATION = "tienda.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3" if DEBUG else BASE_DIR / "data" / "db.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -78,6 +78,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # --- Media (imágenes) ---
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media" if DEBUG else BASE_DIR / "data" / "media"
+MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
